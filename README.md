@@ -1,29 +1,46 @@
 # codereader
 
-このリポジトリは、`preview`からCodeReaderへ名称変更する途中で作成された**プレースホルダー**です。
+このリポジトリは現在READMEだけを持つ、名称確保・整理用のリポジトリです。実装の正本はまだ割り当てていません。
 
-## 実装本体
+## 現在確認できている実装
 
-現在の実装・コミット履歴・Issue・ブランチは、次のリポジトリにあります。
+### PikaLab CodeStudio
 
-- `katakata0522/preview`
+現在公開中のコード編集ツールです。
 
-`preview`には、HTML・CSS・JavaScript入力、iframeプレビュー、複数タブ、Undo / Redo、JSON Export / Import、共有URL、メモなどの機能が実装されています。
+- 公開URL: `https://katakatalab.com/pikalab/code-studio/`
+- 現行ソース: 非公開リポジトリ `katakata0522/KatakataLab` の `pikalab/.code-studio/`
+- 主な保存キー: `pikalab_codestudio_tabs_v3`など
 
-## 統合方針
+### preview
 
-空のこのリポジトリへコードをコピーして二重管理するのではなく、実装本体の`preview`リポジトリ自体を`codereader`へ改名し、履歴を維持します。
+公開リポジトリ`katakata0522/preview`には、別の旧Webミニ実行機があります。
 
-統合前に必要な作業は次のとおりです。
+- 主な保存キー: `miniCodeTabs_v2.3`など
+- 現行PikaLab CodeStudioとは別の実装・別データ形式です
 
-1. 現在利用中のCodeReader画面からJSON Exportする
-2. 現在の公開URLとGitHub Pages設定を記録する
-3. このプレースホルダーを一時改名または削除する
-4. 実装本体の`preview`を`codereader`へ改名する
-5. 新URLでJSON Importし、保存データと動作を確認する
+## 未確定事項
 
-localStorageは公開URLごとに分かれるため、JSON Export前にURLを変更しないでください。
+`CodeReader`という名前を次のどれに使うかは未確定です。
 
-## 注意
+1. PikaLab CodeStudioの別名・後継名称
+2. 旧`preview`の正式名称
+3. 新しい独立サービス
+4. 使用せず、このリポジトリをアーカイブ
 
-このリポジトリを新規実装の正本として使用しません。正式統合が完了したら、このREADMEは実装本体側のREADMEへ置き換えます。
+この判断が終わるまで、次の操作は行いません。
+
+- `preview`からの改名
+- PikaLab CodeStudioのコードコピー
+- このリポジトリへの実装追加
+- `preview`またはこのリポジトリの削除
+- 公開URLや保存データの移行
+
+## 判断前に確認するもの
+
+- 現在の公開リンクと利用実態
+- PikaLab CodeStudioのビルド元・デプロイ方法
+- 旧`preview`を現在も利用しているか
+- 名称変更によるSEO・ブックマーク・保存データへの影響
+
+同じ機能を複数リポジトリへコピーして二重管理しないことを優先します。
